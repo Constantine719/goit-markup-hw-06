@@ -254,7 +254,6 @@ a {
   letter-spacing: 0.06em;
 
   color: var(--white-color);
-  /* outline: 1px solid tomato; */
 }
 
 /* Button */
@@ -290,8 +289,6 @@ a {
 
 .features {
   display: flex;
-  /* padding-top: 94px;
-  padding-bottom: 94px; */
 }
 
 .features-img {
@@ -302,10 +299,6 @@ a {
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
-  /* background-image: url(../images/antenna.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 
 .features .features-item + .features-item {
@@ -406,12 +399,6 @@ a {
 
   background-color: var(--secondary-background-color);
 }
-
-/* .team-div {
-  text-align: center;
-  padding-top: 94px;
-  padding-bottom: 94px; 
-} */
 
 .team-title {
   margin-top: 0;
@@ -943,6 +930,22 @@ a {
   align-items: center;
   fill: var(--icon-color);
   margin: 0px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 11px;
+  fill: black;
+ }
+
+ .close-icon:hover {
+   fill: var(--accent-color)
+ }
+
+ .form-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0;
  }
