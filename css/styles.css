@@ -981,9 +981,23 @@ a {
  }
 
  .textarea-field {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   padding-left: 16px;
+   padding-right: 16px;
    resize: none;
    border-radius: 4px;
    border: 1px solid rgba(33, 33, 33, 0.2);
+ }
+
+ .form-field textarea::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;  
+  color: rgba(117, 117, 117, 0.5);
  }
 
  .licence-label {
@@ -994,3 +1008,4 @@ a {
   color: #757575;
   font-style: normal;
  }
+
