@@ -478,27 +478,35 @@
         </button>
         <p class="form-text">Оставьте свои данные, мы вам перезвоним</p>
         <form class="contact-form" id="contact-form">
-          <label>
-            Имя
-          <input type="text" name="user-name" required/>
-        </label>
-        <label>
-          Телефон
-          <input type="tel" name="user-phone" required/>
-        </label>
-        <label>
-          Почта
-          <input type="email" name="user-email" required/>
-        </label>
-        <textarea
-           name="message"
-           rows="5"
-           cols="45"
-           placeholder="Введите текст">
-          </textarea>          
-          <input id="licence" name="licence" type="checkbox" value="music" />
-          <span>Соглашаюсь с рассылкой и принимаю Условия договора<span/>
-            <button class="button">Отправить</button>
+        <div class="form-field">
+          <label for="name">Имя</label>            
+          <input type="text" name="user-name" id="name" required/>
+        </div>
+
+        <div class="form-field">
+          <label for="tel">Телефон</label>
+          <input type="tel" name="user-phone" id="tel" required/>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Почта</label>
+          <input type="email" name="user-mail" id="email" required/>
+        </div>
+
+        <div class="form-field">
+          <label for="comment">Комментарий</label>
+          <textarea class="textarea-field" name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
+        </div>
+
+        <div class="form-field"></div>
+          <input type="checkbox" name="licence" value="licence" id="licence" />
+          <label class="licence-label" for="licence">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+        </div>
+
+        <div class="form-field"></div>
+          <button class="button" type="submit">Отправить</button>
+        </div>
+
         </form>
       </div>
     </div>
