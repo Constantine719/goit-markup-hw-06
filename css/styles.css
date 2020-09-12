@@ -47,7 +47,7 @@ a {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1170px;
+  width: 1200px;
 }
 
 .section {
@@ -269,6 +269,7 @@ a {
   font-size: 16px;
   line-height: 1.87;
   text-align: center;
+  cursor: pointer;
 
   color: var(--white-color);
   background: var(--accent-color);
@@ -697,6 +698,7 @@ a {
 .button-footer {
   display: flex;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .footer-icon-plane {
@@ -725,6 +727,7 @@ a {
   min-width: 22px;
   border: 1px solid transparent;
   border-radius: 4px;
+  cursor: pointer;
 
   font-weight: bold;
   font-size: 16px;
@@ -888,7 +891,7 @@ a {
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  
+
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -898,33 +901,34 @@ a {
   opacity: 0;
 }
 
- .modal {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 100%;
-   max-width: 528px;
-   height: 581px;
-   background-color: var(--white-color);
-   padding-left: 40px;
-   padding-right: 40px;
-   padding-top: 40px;
-   padding-bottom: 40px;
-   border-radius: 4px;
- }
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+  background-color: var(--white-color);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 4px;
+}
 
- .btn-close {
-   position: absolute;
-   top: 8px;
-   right: 8px;
-   border: 1px solid rgba(0, 0, 0, 0.1);
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
- }
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+}
 
- .close-icon {   
+.close-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -933,13 +937,13 @@ a {
   width: 16px;
   height: 11px;
   fill: black;
- }
+}
 
- .close-icon:hover {
-   fill: var(--accent-color)
- }
+.close-icon:hover {
+  fill: var(--accent-color);
+}
 
- .form-text {
+.form-text {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -951,14 +955,15 @@ a {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 12px;
- }
+}
 
- .form-field {
-   /* outline: 1px solid blue; */
-   display: flex;
-   flex-direction: column;
-   margin-bottom: 10px;
- }
+.form-field {
+  /* outline: 1px solid blue; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
 
 .form-field label {
   margin-bottom: 4px;
@@ -970,42 +975,66 @@ a {
   color: #757575;
 }
 
- .form-field input {
-   margin: 0;
-   padding-left: 42px;
-   padding-right: 0;
-   padding-top: 11px;
-   padding-bottom: 11px ;
-   border-radius: 4px;
-   border: 1px solid rgba(33, 33, 33, 0.2);
- }
+.form-input {
+  outline: 0;
+  margin: 0;
+  padding: 12px 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  text-align: left;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
- .textarea-field {
-   padding-top: 12px;
-   padding-bottom: 12px;
-   padding-left: 16px;
-   padding-right: 16px;
-   resize: none;
-   border-radius: 4px;
-   border: 1px solid rgba(33, 33, 33, 0.2);
- }
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+}
 
- .form-field textarea::placeholder {
+.textarea-field {
+  outline: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.01em;  
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
- }
+}
 
- .licence-label {
+.textarea-field:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.licence-label {
   font-family: Roboto;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: #757575;
   font-style: normal;
- }
+}
 
+.modal-svg {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  top: 55%;
+  left: 15px;
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus ~ .modal-svg {
+  fill: var(--accent-color);
+}
