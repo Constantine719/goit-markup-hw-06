@@ -482,7 +482,7 @@
           <form class="contact-form" id="contact-form">
 
         <div class="form-field">
-          <label for="name">Имя</label>            
+          <label class="label-modal" for="name">Имя</label>            
           <input class="form-input" type="text" name="user-name" id="name" required/>
           <svg class="modal-svg">
             <use href="./images/sprite-modal.svg#icon-person"></use>
@@ -490,7 +490,7 @@
         </div>
 
         <div class="form-field">
-          <label for="tel">Телефон</label>
+          <label class="label-modal" for="tel">Телефон</label>
           <input class="form-input" type="tel" name="user-phone" id="tel" required/>
           <svg class="modal-svg">
             <use href="./images/sprite-modal.svg#icon-phoneblack"></use>
@@ -498,24 +498,27 @@
         </div>
 
         <div class="form-field">
-          <label for="email">Почта</label>
+          <label class="label-modal" for="email">Почта</label>
           <input class="form-input" type="email" name="user-mail" id="email" required/>
           <svg class="modal-svg">
             <use href="./images/sprite-modal.svg#icon-mailblack"></use>
           </svg>
         </div>
 
-        <div class="form-field">
-          <label for="comment">Комментарий</label>
+        <div class="form-field  textarea-mod">
+          <label class="label-modal" for="comment">Комментарий</label>
           <textarea class="textarea-field" name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
         </div>
 
-        <div class="form-field">
-          <input type="checkbox" name="licence" value="licence" id="licence" />
-          <label class="licence-label" for="licence">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+        <div class="form-field">          
+          <label class="licence-label" for="licence">
+            <input class="checkbox" type="checkbox" name="licence" value="licence" id="licence" />
+            <span class="icon"></span>
+            Соглашаюсь с рассылкой и принимаю <a href="./" class="licence-link">Условия договора</a>
+          </label>
         </div>
 
-          <button class="button" type="submit">Отправить</button>
+          <button class="button button-modal" type="submit">Отправить</button>
 
         </form>
       </div>
